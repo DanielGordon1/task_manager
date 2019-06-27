@@ -1,6 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
+
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 
@@ -46,9 +47,9 @@ end
 
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    'chromeOptions' => { args: %w(headless disable-gpu) + [ 'window-size=1280,800' ] })
+    'chromeOptions' => { args: %w[headless disable-gpu] + ['window-size=1280,800'] }
+  )
   Capybara::Selenium::Driver.new app, browser: :chrome, desired_capabilities: capabilities
 end
 Capybara.save_path = Rails.root.join('tmp/capybara')
 Capybara.javascript_driver = :headless_chrome
-
