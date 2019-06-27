@@ -43,10 +43,10 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   # gem 'database_cleaner'
-  # gem 'selenium-webdriver'
   # gem 'factory_bot_rails'
-  # gem 'chromedriver-helper'
 end
 
 group :development do
