@@ -26,4 +26,34 @@ RSpec.describe Task, type: :model do
 
     expect(task).not_to be_valid
   end
+  describe "#mark_as_done" do
+    it "marks a task as done" do
+      task = Task.new(valid_attributes)
+      task.mark_as_done
+      expect(task.done).to eq(true)
+    end
+    it "raises an error message when called more than once" do
+      task = Task.new(valid_attributes)
+      task.mark_as_done
+      task.save!
+      expect(task.mark_as_done[0]).to eq("This task has already been marked as done")
+    end
+  end
+  describe '#update_finished_at' do
+    it "sets the finished_at attribute to a Date after the task has been marked" do
+      task = Task.new(valid_attributes)
+      task.mark_as_done
+      task.save
+      expect(task.finished_at.class).to eq(ActiveSupport::TimeWithZone)
+    end
+    it "is a private method" do
+      task = Task.new(valid_attributes)
+      expect(task.private_methods).to include(:update_finished_at)
+    end
+    it "can update the finished_at attribute of a task when called" do
+      task = Task.new(valid_attributes)
+      task.send(:update_finished_at)
+      expect(task.finished_at.class).to eq(ActiveSupport::TimeWithZone)
+    end
+  end
 end

@@ -9,8 +9,11 @@ AllCops:
     - 'script/**/*'
     - 'support/**/*'
     - 'tmp/**/*'
-    - 'test/**/*'
 
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
 ConditionalAssignment:
   Enabled: false
 StringLiterals:
