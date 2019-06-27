@@ -29,11 +29,3 @@ RSpec.configure do |config|
   # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
-
-Capybara.register_driver :headless_chrome do |app|
-  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    'chromeOptions' => { args: %w(headless disable-gpu) + [ 'window-size=1280,800' ] })
-  Capybara::Selenium::Driver.new app, browser: :chrome, desired_capabilities: capabilities
-end
-Capybara.save_path = Rails.root.join('tmp/capybara')
-Capybara.javascript_driver = :headless_chrome
