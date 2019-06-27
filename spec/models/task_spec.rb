@@ -10,7 +10,7 @@ RSpec.describe Task, type: :model do
   end
   it "has an action" do
     task = Task.new(valid_attributes)
-    expect(task.action).to eq("Finish Unit tests")
+    expect(task.action).to eq("Finish unit tests")
   end
   it "it has a done property that defaults to false" do
     task = Task.new(valid_attributes)
@@ -22,7 +22,7 @@ RSpec.describe Task, type: :model do
   end
   it "is only valid if the action is unique and present" do
     Task.create!(valid_attributes)
-    task = Task.new(action: "Finish Unit tests")
+    task = Task.new(action: "Finish unit tests")
 
     expect(task).not_to be_valid
   end
