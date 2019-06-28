@@ -2,7 +2,7 @@
 
 _A platform designed to keep track of the stuff(taco's) you need to create._
 
-_Unclutter your mind and free you inner 🌮._
+_Unclutter your mind and free your inner 🌮._
 
 
 The application uses
