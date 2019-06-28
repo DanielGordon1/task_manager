@@ -1,6 +1,6 @@
 # Welcome to the Taco Task Manager
 
-_A platform designed to keep track of the stuff(taco's) you need to create._
+_A platform designed to keep track of the stuff(taco's) you need to manage._
 
 _Unclutter your mind and free your inner 🌮._
 
