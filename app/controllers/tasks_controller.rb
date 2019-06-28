@@ -20,12 +20,11 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.mark_as_done
     if @task.save
-      redirect_to root_path
       flash[:notice] = "Succesfully completed this task ✅."
     else
-      redirect_to root_path
       flash[:error] = @task.errors.full_messages.first
     end
+    redirect_to root_path
   end
 
   private

@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Welcome to the Taco Task Manager
 
-Things you may want to cover:
+_A platform designed to keep track of the stuff(taco's) you need to create._
 
-* Ruby version
+_Unclutter your mind and free you inner taco._
 
-* System dependencies
 
-* Configuration
+The application uses
+  - ruby 2.5.3
+  - webpack
+  - postgresql
+  - rspec & capibara for testing
+  - rubocop for code quality
 
-* Database creation
+How to run the tests
+  - 1 in the terminal run: '$ rspec'
+  - 2 in the terminal run: '$ rake'
+    * This option will run both rubocop and the full test suite.
 
-* Database initialization
+How to run Rubocop
+  - 1 in the terminal run: '$ rubocop'
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
