@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+    <h3>Create a new task!</h3>
+    <%= simple_form_for @task do |f| %>
+      <%= f.input :action %>
+      <%= f.submit "Create task", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+    <div class="col-6">
+
+    </div>
+  </div>
+</div>
