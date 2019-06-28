@@ -15,10 +15,10 @@ The application uses
   - rubocop for code quality
 
 How to run the tests
-  - 1 in the terminal run: '$ rspec'
-  - 2 in the terminal run: '$ rake'
+  - in the terminal run: '$ rspec'
+  - in the terminal run: '$ rake'
     * This option will run both rubocop and the full test suite.
 
 How to run Rubocop
-  - 1 in the terminal run: '$ rubocop'
+  - in the terminal run: '$ rubocop'
 
