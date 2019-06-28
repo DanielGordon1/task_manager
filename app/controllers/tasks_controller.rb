@@ -30,7 +30,7 @@ class TasksController < ApplicationController
   private
 
   def set_tasks
-    @completed_tasks, @uncompleted_tasks = Task.all.partition(&:done)
+    @completed_tasks, @uncompleted_tasks = Task.desc.partition(&:done)
   end
 
   def task_params
