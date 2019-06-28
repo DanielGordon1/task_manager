@@ -6,6 +6,8 @@ class Task < ApplicationRecord
     finished_at.nil? ? self.done = true : errors.add(:done, 'This task has already been marked as done')
   end
 
+  default_scope { order(created_at: :desc) }
+
   private
 
   def update_finished_at
