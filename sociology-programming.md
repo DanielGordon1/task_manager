@@ -2,7 +2,7 @@
 ---
 Back in 2015 I was studying Urban Sociology in Amsterdam. Two months into the year each student had to choose the subject for his or her final thesis. Because I never went abroad during my bachelor or my master, the project group with the location of study being Shenzhen appealed a lot to me.
 
-Wait what? Shenzhen 🤨, _“what the hell is Shenzhen”_ you might be thinking, this was my first thought at the time as well. Well, Shenzhen is a city in southern China that is home to between 10 and 15 million inhabitants, it borders Hong Kong 🇭🇰 and is one of the many populous areas in the Pearl River Delta. Other Delta notables include Guangzhou and Macau.
+Wait what? Shenzhen 🤨,_“what the hell is Shenzhen”_ you might be thinking, this was my first thought at the time as well. Well, Shenzhen is a city in southern China that is home to between 10 and 15 million inhabitants, it borders Hong Kong 🇭🇰 and is one of the many populous areas in the Pearl River Delta. Other Delta notables include Guangzhou and Macau.
 
 I think it would serve us well to have a good understanding of this city before continuing, so let’s have a brief look at its history. In 1979 the **visionary leader Deng Xiaoping** made a bold step towards **market-oriented reforms** and planned to execute a **capitalist experiment.** A central point to his capitalist experiment was the plan to develop several ***Special Economic Zones.*** These zones were to be considered **training grounds for local talent**, but also to experiment with possible **future economic management systems**. Over the course of three phases, construction, restructuring and re-engineering, the Shenzhen Special economic zone was built up next to Hong Kong.
 
