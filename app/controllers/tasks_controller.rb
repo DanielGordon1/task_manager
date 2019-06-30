@@ -19,7 +19,8 @@ class TasksController < ApplicationController
   def mark
     @task = Task.find(params[:id])
     @task.mark_as_completed
-    if @task.save
+    if @task.errors.none?
+      @task.save
       flash[:notice] = "Succesfully completed this task ✅."
     else
       flash[:error] = @task.errors.full_messages.first
