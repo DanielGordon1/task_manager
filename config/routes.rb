@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       patch "mark"
     end
   end
+
+  get "/about", to: "pages#about", as: :about
 end
