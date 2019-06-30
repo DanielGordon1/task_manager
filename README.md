@@ -18,7 +18,7 @@ How to setup the application
   - in the terminal run: '$ bundle install && yarn install'
     * This will fetch all the projects' ruby and javascript dependencies.
   - in the terminal run: '$ rails db:setup'
-    * This will create and migrate the database
+    * This will create, migrate and seed the database
 
 How to launch a server
   - in the terminal run: '$ rails server' || '$ rails s'
@@ -31,3 +31,6 @@ How to run the tests
 How to run Rubocop
   - in the terminal run: '$ rubocop'
 
+On the about page there is a Markdown to HTML converter included.
+  - To try it out I've included a markdown file in the project.
+  - Copy + Paste the content of the sociology-programming.md file into the input box!
