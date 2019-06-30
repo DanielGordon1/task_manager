@@ -1,7 +1,7 @@
 <div class="card-product task-item" data-task-id="<%= task.id %>">
-  <% if task.done %>
+  <% if task.completed %>
     <i class="far fa-check-square"></i>
-    <p class="finished-at">completed <%= time_ago_in_words(task.finished_at) %> ago</p>
+    <p class="finished-at">completed <%= time_ago_in_words(task.completed_at) %> ago</p>
   <% else %>
     <i class="far fa-square"></i>
     <%= link_to "Complete", mark_task_path(task), class: "complete_task_button btn btn-primary", method: :patch %>

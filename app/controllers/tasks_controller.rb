@@ -18,7 +18,7 @@ class TasksController < ApplicationController
 
   def mark
     @task = Task.find(params[:id])
-    @task.mark_as_done
+    @task.mark_as_completed
     if @task.save
       flash[:notice] = "Succesfully completed this task ✅."
     else
@@ -30,7 +30,7 @@ class TasksController < ApplicationController
   private
 
   def set_tasks
-    @completed_tasks, @uncompleted_tasks = Task.desc.partition(&:done)
+    @completed_tasks, @uncompleted_tasks = Task.desc.partition(&:completed)
   end
 
   def task_params
