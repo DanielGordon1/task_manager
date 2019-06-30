@@ -23,7 +23,7 @@ class TasksController < ApplicationController
       @task.save
       flash[:notice] = "Succesfully completed this task ✅."
     else
-      flash[:error] = @task.errors.full_messages.first
+      flash[:alert] = @task.errors.full_messages.first
     end
     redirect_to root_path
   end

@@ -36,7 +36,7 @@ RSpec.describe Task, type: :model do
       task = Task.new(valid_attributes)
       task.mark_as_completed
       task.save!
-      expect(task.mark_as_completed[0]).to eq("This task has already been marked as completed")
+      expect(task.mark_as_completed[0]).to eq("- This task has already been completed!")
     end
   end
   describe '#update_completed_at' do
