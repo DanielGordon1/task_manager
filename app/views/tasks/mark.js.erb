@@ -1,0 +1,13 @@
+function updateDOM() {
+  const task = document.querySelector("[data-task-id='<%= @task.id %>']");
+  // first step, remove from uncompleted list
+  task.remove();
+  // second step, add to completed list
+  const markedTaskHTML = "<%= j render 'tasks/task', task: @task %>";
+  const completedTasksList = document.getElementById('completed-tasks');
+  completedTasksList.insertAdjacentHTML('afterbegin', markedTaskHTML);
+  // display nice flash message
+  flashes.innerHTML = "<%= j render 'shared/flashes' %>";
+}
+
+updateDOM();

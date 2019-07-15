@@ -1,0 +1,4 @@
+<%= simple_form_for task, remote: true do |f| %>
+  <%= f.input :action %>
+  <%= f.submit "Create task", class: "btn btn-primary" %>
+<% end %>

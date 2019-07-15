@@ -1,0 +1,18 @@
+function updateForm(formHTML) {
+  const form = document.getElementById('new_task');
+  form.innerHTML = formHTML;
+}
+
+function addTaskToDOM(taskHTML) {
+  const taskList = document.getElementById('uncompleted-tasks');
+  taskList.insertAdjacentHTML('afterbegin', taskHTML);
+  const flashes = document.getElementById('flashes');
+  flashes.innerHTML = "<%= j render 'shared/flashes' %>";
+}
+
+<% if @task.persisted? %>
+  updateForm("<%= j render 'tasks/form', task: Task.new %>");
+  addTaskToDOM("<%= j render 'tasks/task', task: @task %>");
+<% else %>
+  updateForm("<%= j render 'tasks/form', task: @task %>");
+<% end %>

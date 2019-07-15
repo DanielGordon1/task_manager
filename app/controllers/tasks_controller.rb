@@ -8,24 +8,47 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      redirect_to root_path
-      flash[:notice] = "Succesfully created a new task 💪."
+      message = "Succesfully created a new task 💪."
+      respond_to do |format|
+        format.html {
+          redirect_to root_path
+          flash[:notice] = message
+        }
+        format.js { flash.now[:notice] = message }
+      end
     else
-      set_tasks
-      render :index
+      respond_to do |format|
+        format.html {
+          set_tasks
+          render :index
+        }
+        format.js
+      end
     end
   end
 
   def mark
     @task = Task.find(params[:id])
     @task.mark_as_completed
-    if @task.errors.none?
-      @task.save
-      flash[:notice] = "Succesfully completed this task ✅."
+    if @task.errors.none? && @task.save
+      message = "Succesfully completed this task ✅."
+      respond_to do |format|
+        format.html {
+          flash[:notice] = message
+          redirect_to root_path
+        }
+        format.js { flash.now[:notice] = message }
+      end
     else
-      flash[:alert] = @task.errors.full_messages.first
+      message = @task.errors.full_messages.first
+      respond_to do |format|
+        format.html {
+          flash[:alert] = message
+          redirect_to root_path
+        }
+        format.js { flash[:alert] = message }
+      end
     end
-    redirect_to root_path
   end
 
   private
